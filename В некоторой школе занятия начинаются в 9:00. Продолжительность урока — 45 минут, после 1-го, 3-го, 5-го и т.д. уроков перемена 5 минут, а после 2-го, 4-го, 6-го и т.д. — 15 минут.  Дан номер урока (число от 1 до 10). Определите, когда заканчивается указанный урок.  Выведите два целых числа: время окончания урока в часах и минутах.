@@ -1,0 +1,15 @@
+n_les = int(input())    #количество уроков
+t_start_h = 9   
+t_start_m = 0   
+t_les = 45     
+t_br_od = 5     
+t_br_ev = 15  
+if n_les % 2 == 0:        
+    n_br_od = n_les / 2     
+    n_br_ev = n_br_od - 1   
+else:   
+    n_br_od = (n_les - 1) // 2
+    n_br_ev = n_br_od
+t_br_sum = n_br_od * t_br_od + n_br_ev * t_br_ev    
+t_passed = t_br_sum + t_les * n_les                
+print((t_start_h + int(t_passed // 60)), (t_start_m + int(t_passed % 60)))
